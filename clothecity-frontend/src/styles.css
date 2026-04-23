@@ -1,0 +1,51 @@
+/* 1. Global Variables (Theme Colors) - Mewa oona ma thanaka use karanna puluwan */
+:root {
+  --primary-blue: #00c3ff;
+  --primary-blue-hover: #0056b3;
+  --bg-dark: #121212;
+  --bg-panel: #1e1e1e;
+  --text-light: #ffffff;
+  --text-muted: #a0a0a0;
+}
+
+/* 2. Reset (Browser eken dena default margins ain kireema) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Base Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Laksana modern font ekak */
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* 4. Global Elements */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  outline: none;
+}
+
+/* Custom Scrollbar (Dark theme ekata lassanai) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark); 
+}
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-blue); 
+}
