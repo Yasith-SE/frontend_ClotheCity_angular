@@ -1,0 +1,38 @@
+<div class="store-page">
+  <app-navbar theme="light"></app-navbar>
+
+  <div class="store-layout">
+    <app-sidebar theme="light" activeItem="My products"></app-sidebar>
+
+    <main class="store-main">
+      <h1 class="visually-hidden">Clothes Store</h1>
+
+      <div class="products-scroll">
+        <section class="products-grid" aria-label="Clothing products">
+          <article class="product-card" *ngFor="let product of products">
+            <div class="product-image-shell">
+              <img
+                [src]="product.image"
+                [alt]="product.name"
+                class="product-image"
+                [class.product-image--contain]="product.imageFit === 'contain'"
+              />
+            </div>
+
+            <div class="product-content">
+              <div>
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.category }}</p>
+              </div>
+
+              <div class="product-footer">
+                <span class="product-price">{{ product.price }}</span>
+                <button type="button">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+</div>

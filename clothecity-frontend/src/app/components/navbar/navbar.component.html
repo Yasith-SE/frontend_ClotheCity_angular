@@ -1,0 +1,23 @@
+<nav class="top-navbar" [class.top-navbar--light]="theme === 'light'">
+  <div class="nav-logo">
+    <div class="logo-box">C</div>
+    <h2>Clothe<span class="text-blue">City</span></h2>
+  </div>
+
+  <div class="nav-links">
+    <a routerLink="/shop" routerLinkActive="active-pink">Shop</a>
+    <a routerLink="/collection" routerLinkActive="active-pink">Collection</a>
+    <a routerLink="/ai-style" routerLinkActive="active-pink">Ai Style</a>
+    <a routerLink="/clothes-store" routerLinkActive="active-pink">Clothes Store</a>
+    <a routerLink="/sell" routerLinkActive="active-pink">Sell</a>
+  </div>
+
+  <div class="nav-actions">
+    <button class="icon-button" type="button" aria-label="Toggle theme">
+      <i class="fa-regular fa-moon icon" aria-hidden="true"></i>
+    </button>
+    <a class="icon-button" routerLink="/register" aria-label="Open profile">
+      <i class="fa-regular fa-user icon" aria-hidden="true"></i>
+    </a>
+  </div>
+</nav>

@@ -1,0 +1,8 @@
+<aside class="sidebar" [class.sidebar--light]="theme === 'light'">
+  <ul>
+    <li *ngFor="let item of items" [class.active]="item === activeItem">
+      {{ item }}
+    </li>
+  </ul>
+  <button class="settings-link" type="button">Settings</button>
+</aside>

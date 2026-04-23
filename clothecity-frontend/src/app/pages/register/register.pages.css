@@ -1,114 +1,21 @@
-.auth-container {
-  display: flex;
-  height: 100vh;
-  background-color: #121212; /* Dark theme default */
-}
+.auth-page-bg { height: 100vh; width: 100%; background-color: #0d1117; display: flex; justify-content: center; align-items: center; }
+.auth-card { display: flex; width: 850px; height: 450px; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
 
-.branding-panel {
-  flex: 1;
-  background: linear-gradient(180deg, #6ba4d8 0%, #2974b6 100%);
-  padding: 40px;
-  display: flex;
-  align-items: flex-start;
-}
+.branding-panel { flex: 1; background: linear-gradient(135deg, #7ab0e0 0%, #2f69a5 100%); padding: 40px; }
+.logo-area { display: flex; align-items: center; gap: 10px; color: black; font-size: 1.2rem;}
+.logo-icon { background: #0056b3; color: white; width: 35px; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 8px; font-weight: bold; }
+.text-dark { color: #003366; }
 
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: black;
-}
+.form-panel { flex: 1; background-color: #060b13; padding: 50px 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+h3 { color: white; font-size: 1.8rem; margin-bottom: 40px; }
+form { width: 100%; max-width: 300px; display: flex; flex-direction: column; gap: 20px; }
 
-.logo-icon {
-  background-color: #0056b3;
-  color: white;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  font-weight: bold;
-}
+.custom-input { width: 100%; padding: 12px 20px; border-radius: 25px; border: none; background-color: #1e2430; color: white; font-size: 0.9rem; outline: none; }
+.custom-input::placeholder { color: #666; }
 
-.text-blue { color: #0056b3; }
+.password-wrapper { position: relative; width: 100%; }
+.eye-icon { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: #666; cursor: pointer; transition: 0.3s;}
+.eye-icon:hover { color: white; }
 
-.form-panel {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f4f8; /* Light blueish background for form area */
-}
-
-.form-wrapper {
-  width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.form-wrapper h3 {
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  color: #000;
-  font-weight: bold;
-}
-
-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.custom-input {
-  width: 100%;
-  padding: 12px 20px;
-  border-radius: 25px;
-  border: 1px solid #ccc;
-  background-color: white;
-  outline: none;
-  font-size: 0.9rem;
-}
-
-.password-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.eye-icon {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #888;
-}
-
-.action-btn {
-  margin-top: 10px;
-  padding: 12px 40px;
-  border-radius: 25px;
-  background-color: #0056b3;
-  color: white;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  align-self: center;
-  transition: 0.3s;
-}
-
-.action-btn:hover { background-color: #003d82; }
-
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  .form-panel { background-color: #0a0e17; }
-  .form-wrapper h3 { color: white; }
-  .custom-input {
-    background-color: #1e2430;
-    border: none;
-    color: white;
-  }
-}
+.action-btn { margin-top: 15px; padding: 12px; border-radius: 25px; background-color: #0066ff; color: white; border: none; font-weight: bold; font-size: 1rem; cursor: pointer; width: 120px; align-self: center; transition: 0.3s; }
+.action-btn:hover { background-color: #0052cc; }

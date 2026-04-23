@@ -1,0 +1,134 @@
+.top-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.1rem 2.5rem;
+  background: #252525;
+  border-bottom: 1px solid #333;
+  color: #fff;
+}
+
+.top-navbar--light {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: #e7e0d8;
+  color: #161616;
+  box-shadow: 0 12px 30px rgba(25, 20, 17, 0.06);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.nav-logo h2 {
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.logo-box {
+  width: 3.15rem;
+  aspect-ratio: 1;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #2c5da9 0%, #58a9ff 100%);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  box-shadow: 0 12px 18px rgba(58, 116, 191, 0.24);
+}
+
+.text-blue {
+  color: #58a9ff;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 2rem);
+  flex: 1;
+  flex-wrap: wrap;
+  font-weight: 500;
+}
+
+.nav-links a {
+  color: inherit;
+  opacity: 0.72;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active-pink {
+  opacity: 1;
+}
+
+.top-navbar:not(.top-navbar--light) .nav-links a:hover {
+  color: #fff;
+}
+
+.nav-links .active-pink {
+  color: #ff6aa9;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
+}
+
+.icon-button {
+  width: 2.9rem;
+  height: 2.9rem;
+  border: none;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.icon-button:hover {
+  transform: translateY(-1px);
+}
+
+.top-navbar:not(.top-navbar--light) .icon-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #7fc4ff;
+}
+
+.top-navbar--light .icon-button:hover {
+  background: rgba(88, 169, 255, 0.12);
+  color: #1b4f91;
+}
+
+.icon {
+  font-size: 1.45rem;
+}
+
+@media (max-width: 860px) {
+  .top-navbar {
+    padding: 1rem 1.1rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1rem 1.25rem;
+  }
+}

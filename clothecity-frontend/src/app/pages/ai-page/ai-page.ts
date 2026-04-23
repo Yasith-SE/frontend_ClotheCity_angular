@@ -1,29 +1,39 @@
-
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; 
-import '@google/model-viewer'; // Imports the 3D engine
+import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { SidebarComponent } from '../../components/sidebar/sidebar.component';
+import '@google/model-viewer';
 
 @Component({
   selector: 'app-ai-page',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA], // CRITICAL: Allows the 3D viewer tag
+  imports: [CommonModule, FormsModule, NavbarComponent, SidebarComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './ai-page.html',
   styleUrls: ['./ai-page.css']
 })
 export class AiPageComponent {
+  currentAvatar: string = 'https://modelviewer.dev/shared-assets/models/Astronaut.glb';
   promptText: string = '';
   isGenerating: boolean = false;
 
-  generateStyle() {
-    if (!this.promptText) return;
+  changeClothes(clothType: string) {
+    if (clothType === 'leather-jacket') {
+      this.currentAvatar = 'assets/models/avatar-jacket.glb';
+    } else if (clothType === 'red-dress') {
+      this.currentAvatar = 'assets/models/avatar-dress.glb';
+    }
+  }
+
+  generateAiStyle() {
+    if (!this.promptText.trim()) return;
     this.isGenerating = true;
 
-    // Fake AI generation delay (3 seconds)
     setTimeout(() => {
       this.isGenerating = false;
-      alert('AI generation complete! (Later, we will swap the 3D texture here)');
+      this.currentAvatar = 'assets/models/avatar-cyberpunk.glb';
+      this.promptText = ''; 
     }, 3000);
   }
 }
